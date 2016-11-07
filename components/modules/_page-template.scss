@@ -1,0 +1,169 @@
+// Components page template
+
+.page-header{
+  background-color: $night;
+  padding: 80px 0 40px 0;
+  margin: 0 0 32px 0;
+
+}
+
+.demo-title{
+  margin: 0;
+  color: $platinum;
+}
+
+.demo-body{
+  margin: 0;
+  @include mq($from: gel-bp-m) {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.typo-settings {
+  color: $magenta;
+  margin: 8px 0;
+
+  &--g2,
+  &--g3 {
+    display: none;
+  }
+
+  &--g1 {
+    @include mq($from: gel-bp-s) {
+      display: none;
+    }
+  }
+
+  &--g2 {
+    @include mq($from: gel-bp-s, $until: gel-bp-m) {
+      display: block;
+    }
+  }
+
+  &--g3 {
+    @include mq($from: gel-bp-m) {
+      display: block;
+    }
+  }
+}
+
+
+.typography-demo{
+  padding: 32px 0;
+  border-bottom: 1px solid $storm;
+
+  @include mq($from: gel-bp-m) {
+    display: table;
+  }
+}
+
+.page-titles{
+    margin: 48px 0 24px 0;
+
+&>.title{
+  margin:0;
+  padding-bottom: 8px;
+  }
+}
+
+.title-pipe{
+  width:24px;
+  border-bottom: solid 1px $raspberry;
+}
+
+.typo-table{
+  padding: 32px 0;
+}
+
+table{
+  width: 100%;
+  margin-top: 32px;
+  border-collapse: collapse;
+
+}
+
+.table-header{
+  background-color: $night;
+  border: 1px solid $storm;
+}
+
+th,
+td{
+  border: 1px solid $storm;
+  padding: 8px;
+  width: 120px;
+  color: $platinum;
+  height: 50px;
+
+
+}
+
+td{
+  color: $silver;
+  height: 40px;
+}
+
+
+
+.swatch{
+  width:80px;
+  border-radius:80px;
+  height:80px;
+  margin:auto;
+  border: 1px solid $storm;
+}
+
+.swatch-item{
+  text-align:center;
+  padding: 24px 0;
+}
+
+.swatch-description{
+  padding:16px 0 0 0;
+}
+
+.swatch-description > p.title{
+  padding-bottom: 8px;;
+}
+
+.browserSize{
+  color: $stone;
+  text-align: right;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width:100%;
+
+  &--g2,
+  &--g3,
+  &--g4 {
+    display: none;
+  }
+
+  &--g1 {
+    @include mq($from: gel-bp-s) {
+      display: none;
+    }
+  }
+
+  &--g2 {
+    @include mq($from: gel-bp-s, $until: gel-bp-m) {
+      display: block;
+    }
+  }
+
+  &--g3 {
+    @include mq($from: gel-bp-m, $until: gel-bp-xl) {
+      display: block;
+    }
+  }
+
+  &--g4 {
+    @include mq($from: gel-bp-xl) {
+      display: block;
+    }
+  }
+
+
+}
