@@ -1,0 +1,120 @@
+.btn {
+    min-width: 100px;
+    background-color: $storm;
+    padding: 0 12px;
+    height: 40px;
+    border: 0;
+    color: $platinum;
+    vertical-align: middle;
+    transition: color 0.4s ease 0s,background-color 0.4s ease 0s;
+    cursor: pointer;
+
+
+    &:focus,
+    &:hover {
+        background-color: $magenta;
+        outline: 0;
+
+        svg{
+          fill: $magenta;
+        }
+    }
+
+    &--inverted{
+      background-color: $raspberry;
+      color: $platinum;
+
+      &:hover,
+      &:focus{
+        background-color: $stone;
+      }
+
+    }
+
+    &--fullwidth{
+      width:100%;
+    }
+
+    &--relatedLinks{
+      background-color: transparent;
+      border-top: solid 1px $stone;
+      width: 100%;
+      text-align: left;
+
+      @include mq($from: gel-bp-s, $until: gel-bp-m){
+        padding-right: 0;
+      }
+
+      svg{
+        fill: $silver;
+        transition: fill 0.4s ease 0s,background-color 0.4s ease 0s;
+        vertical-align: middle;
+        display: inline-block;
+      }
+
+      &:hover,
+      &:focus{
+        background-color: transparent;
+        color: $magenta;
+      }
+
+
+
+    }
+}
+
+.relatedLinks--outer{
+
+  border-left: solid 6px $magenta;
+}
+
+.lnk {
+    text-decoration: none;
+    color: $platinum;
+    transition: color 0.4s ease 0s,background-color 0.4s ease 0s;
+    cursor: pointer;
+
+    &:hover {
+        color: $magenta;
+
+        svg {
+            fill: $magenta;
+        }
+    }
+
+    &--bold {
+        font-weight: bold;
+    }
+
+    &--underline:hover {
+        padding-bottom: 3px;
+        border-bottom: 1px solid;
+    }
+
+    &--icon {
+        font-weight: bold;
+        display: table;
+        margin: auto;
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        svg {
+            fill: $silver;
+            padding-right: 8px;
+            transition: fill 0.4s ease 0s,background-color 0.4s ease 0s;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+}
+
+.leftBlock{
+  float:left;
+}
+
+.rightBlock{
+  float: right;
+}
