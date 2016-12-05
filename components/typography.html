@@ -24,23 +24,26 @@
         <th class=" ipl-goose-bold">G2</th>
         <th class=" ipl-goose-bold">G3 &amp;G4</th>
       </tr>
-
       {{#typography}}
         {{>typoRow.hbs}}
       {{/typography}}
     </table>
   </script>
+  <script id="nav-bar-template" type="text/x-handlebars-template">
+      {{>nav.hbs}}
+  </script>
 </head>
 
 <body>
+  <div id="nav-bar"></div>
   <div class="page-header">
     <div class="gel-wrap">
       <div class="browserSize gel-layout">
         <div class="gel-layout__item">
-        <p class="ipl-goose-bold browserSize browserSize--g1">Breakpoint: G1</p>
-        <p class="ipl-goose-bold browserSize browserSize--g2">Breakpoint: G2</p>
-        <p class="ipl-goose-bold browserSize browserSize--g3">Breakpoint: G3</p>
-        <p class="ipl-goose-bold browserSize browserSize--g4">Breakpoint: G4</p>
+          <p class="ipl-canary browserSize browserSize--g1">Breakpoint: G1</p>
+          <p class="ipl-canary browserSize browserSize--g2">Breakpoint: G2</p>
+          <p class="ipl-canary browserSize browserSize--g3">Breakpoint: G3</p>
+          <p class="ipl-canary browserSize browserSize--g4">Breakpoint: G4</p>
       </div>
     </div>
       <div class="gel-layout">
@@ -62,7 +65,7 @@
   <div class="content content-typo gel-wrap">
     </div>
    <!--page title-->
-  <!--page title-->
+
   <div class="gel-wrap">
     <div class="page-titles">
       <p class="ipl-buzzard-bold title">Sizes</p>
@@ -73,7 +76,6 @@
   <div class="gel-wrap">
     <div class="gel-layout gel-1/1">
       <div class="type-sizes gel-layout__item gel-1/1" id="typo-table">
-
       </div>
     </div>
   </div>
@@ -82,8 +84,11 @@
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="bower_components/handlebars/handlebars.min.js"></script>
+  <script src="src/js/core.js"></script>
     <script src="src/js/typography.js"></script>
     <script src="src/js/typoRow.js"></script>
+    <script src="src/js/navHbs.js"></script>
+    <script src="src/js/nav.js"></script>
 
   <script>
 
@@ -105,17 +110,19 @@
     function renderAllTheBirds() {
       birdParameters.forEach(renderBird);
     }
-
     renderAllTheBirds();
   </script>
 
   <script>
     var tableTemplate  = $('#typo-table-template').html();
-
     var renderTable = Handlebars.compile(tableTemplate);
-
     $('#typo-table').html(renderTable({ typography: birdParameters, usedFor: 'Used For'  }));
   </script>
+
+  <script>
+  $( ".navLink__typography" ).addClass( "navLink--active" );
+  </script>
+
 
 </body>
 
