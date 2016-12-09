@@ -13,7 +13,15 @@ var navLinks = [{
   {
   pageTitle: "Atoms",
   pageLink: "atoms"
-  }
+  },
+  {
+  pageTitle: "Molecules",
+  pageLink: "molecules"
+},
+{
+pageTitle: "Organisms",
+pageLink: "organisms"
+}
 ];
 
 var navbarTemplate = $('#nav-bar-template').html();

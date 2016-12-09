@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BBC iPlayer UX | Organisms</title>
+    <link rel="stylesheet" href="src/css/core.css" />
+    <script id="nav-bar-template" type="text/x-handlebars-template">
+        {{>nav.hbs}}
+    </script>
+    <script id="page-header-template" type="text/x-handlebars-template">
+        {{>pageHeader.hbs}}
+    </script>
+</head>
+
+<body>
+  <div id="nav-bar"></div>
+    <div id="pageHeader"></div>
+
+    <div class="gel-wrap">
+        <div class="gel-layout">
+            <div class="gel-layout__item">
+                <div class="organism_item">
+                    <div class="organism-item-demo">
+                      <div class="modal">
+                        <div class="modal__inner">
+                          <div class="modal__description">
+                            <h2 class="modal__title ipl-buzzard-bold">Modal Title</h2>
+                            <p class="modal__description ipl-skylark">Modal Description</p>
+                          </div>
+                        </div>
+                        <div class="modal__buttons">
+                        </div>
+                      </div>
+                        <div class="organism-item-title">
+                            <p class="ipl-skylark-bold title">
+                                Modal
+                            </p>
+                        </div>
+                        <div class="organism-item-description">
+                            <p class="ipl-canary body-copy">
+                                Description
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+        </div> <!-- gel-layout -->
+    </div> <!--gel wrap-->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
+    <script src="src/js/core.js"></script>
+    <script src="src/js/navHbs.js"></script>
+    <script src="src/js/nav.js"></script>
+    <script src="src/js/pageHeader.js"></script>
+
+    <script>
+      var headerTemplate  = $('#page-header-template').html();
+      var renderheader = Handlebars.compile(headerTemplate);
+      $('#pageHeader').html(renderheader({pageTitle:"Organisms", pageDescription:"Page Description"}));
+    </script>
+
+    <script>
+    $( ".organisms" ).addClass( "navLink--active" );
+    </script>
+
+</body>
+
+</html>

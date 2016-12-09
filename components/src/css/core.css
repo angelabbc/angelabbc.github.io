@@ -1684,6 +1684,13 @@ td {
   text-align: center;
   padding: 32px 0px; }
 
+.organism-item-title {
+  padding-top: 24px; }
+
+.organism-item-demo {
+  text-align: left;
+  padding: 32px 0px; }
+
 .btn {
   min-width: 100px;
   background-color: #333;
@@ -1717,7 +1724,8 @@ td {
     border-top: solid 1px #444;
     width: 100%;
     text-align: left;
-    transition: all 0.4s ease 0s; }
+    transition: all 0.4s ease 0s;
+    padding-right: 8px; }
     @media (min-width: 25em) and (max-width: 37.49em) {
       .btn--relatedLinks {
         padding-right: 0; } }
@@ -1733,9 +1741,9 @@ td {
       .btn--relatedLinks:hover svg, .btn--relatedLinks:focus svg {
         fill: #f54997; }
   .btn--leftIcon svg {
-    padding-right: 4px; }
+    padding-right: 8px; }
   .btn--rightIcon svg {
-    padding-left: 4px; }
+    padding-left: 8px; }
   .btn--animate {
     text-transform: uppercase;
     background-color: rgba(37, 37, 37, 0.7);
@@ -1851,6 +1859,8 @@ td {
   .filter-item p {
     display: inline-block;
     vertical-align: middle; }
+  .filter-item svg {
+    padding-right: 8px; }
   .filter-item:hover, .filter-item:focus {
     fill: #fff;
     color: #fff; }
@@ -1892,6 +1902,44 @@ td {
   .progress__bar {
     height: 100%;
     background-color: #f54997; }
+
+.duration-label,
+.duration-label__icon,
+.duration-label__time {
+  display: inline-block;
+  vertical-align: middle;
+  fill: #bbb;
+  color: #bbb; }
+
+.duration-label svg {
+  padding-right: 8px;
+  vertical-align: middle;
+  display: inline-block; }
+
+.inline-list--separated .inline-list__item {
+  border-left: 1px solid #444;
+  padding-left: 16px;
+  margin-left: 16px; }
+.inline-list--separated .inline-list__item:first-child {
+  border-left: 0;
+  padding-left: 0;
+  margin-left: 0; }
+.inline-list__item {
+  display: inline-block; }
+
+.modal {
+  width: 456px;
+  background-color: #2a2a2a;
+  padding: 56px 32px 32px;
+  text-align: center; }
+  .modal__title {
+    color: #f54997; }
+  .modal__description {
+    color: #bbb;
+    margin-top: 8px; }
+  .modal__buttons--stacked {
+    height: 56px;
+    text-align: center; }
 
 nav {
   height: 60px;
@@ -1951,7 +1999,8 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0 0 80px 0; }
 
-p {
+p,
+h2 {
   margin: 0; }
 
 /*# sourceMappingURL=core.css.map */
