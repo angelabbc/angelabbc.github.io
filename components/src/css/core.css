@@ -1688,8 +1688,61 @@ td {
   padding-top: 24px; }
 
 .organism-item-demo {
-  text-align: left;
+  text-align: center;
   padding: 32px 0px; }
+
+nav {
+  height: 60px;
+  background-color: #1e1e1e;
+  border-bottom: solid 1px #333;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: inline-block;
+  vertical-align: middle; }
+
+nav ul {
+  padding: 20px;
+  list-style: none;
+  text-align: left; }
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px; }
+
+nav ul li a {
+  text-transform: uppercase; }
+
+a.active {
+  border-bottom: 2px solid #ecf0f1; }
+
+.toggleNavBtn {
+  text-align: right;
+  padding: 20px;
+  text-transform: uppercase; }
+
+#subnav {
+  width: 100%;
+  background-color: black;
+  border-top: solid 1px #333;
+  -webkit-transition: all 0.7s ease-out;
+  overflow: hidden;
+  max-height: 0px; }
+  #subnav.active {
+    border-bottom: solid 1px #333;
+    border-top: solid 1px #333;
+    height: auto;
+    max-height: 900px; }
+  #subnav ul {
+    width: 100%;
+    margin: 0 auto;
+    display: block; }
+    #subnav ul li {
+      display: block;
+      padding: 16px 0; }
+
+.navLink--active a {
+  color: #f54997; }
 
 .btn {
   min-width: 100px;
@@ -1697,7 +1750,7 @@ td {
   padding: 0 12px;
   height: 40px;
   border: 0;
-  color: #eee;
+  color: #fff;
   vertical-align: middle;
   transition: color 0.4s ease 0s,background-color 0.4s ease 0s;
   cursor: pointer;
@@ -1706,7 +1759,7 @@ td {
     display: inline-block;
     vertical-align: middle; }
   .btn svg {
-    fill: #eee;
+    fill: #fff;
     display: inline-block;
     vertical-align: middle; }
   .btn:focus, .btn:hover {
@@ -1714,7 +1767,7 @@ td {
     outline: 0; }
   .btn--inverted {
     background-color: #cf3e80;
-    color: #eee; }
+    color: #fff; }
     .btn--inverted:hover, .btn--inverted:focus {
       background-color: #444; }
   .btn--fullwidth {
@@ -1774,7 +1827,7 @@ td {
 
 .lnk {
   text-decoration: none;
-  color: #eee;
+  color: #fff;
   transition: color 0.4s ease 0s,background-color 0.4s ease 0s;
   cursor: pointer; }
   .lnk:hover {
@@ -1799,6 +1852,19 @@ td {
       transition: fill 0.4s ease 0s,background-color 0.4s ease 0s;
       vertical-align: middle;
       display: inline-block; }
+  .lnk--dropdown {
+    font-weight: bold;
+    display: table;
+    margin: auto; }
+    .lnk--dropdown a {
+      display: inline-block;
+      vertical-align: middle; }
+    .lnk--dropdown svg {
+      fill: #bbb;
+      padding-left: 6px;
+      transition: fill 0.4s ease 0s,background-color 0.4s ease 0s;
+      vertical-align: middle;
+      display: inline-block; }
 
 .leftBlock {
   float: left;
@@ -1816,7 +1882,7 @@ td {
   margin: 1px; }
 
 .carouselButtons {
-  background-color: #eee; }
+  background-color: #fff; }
   .carouselButtons svg {
     fill: #1e1e1e; }
 
@@ -1825,13 +1891,13 @@ td {
   padding: 16px;
   border: 0;
   cursor: pointer;
-  fill: #eee; }
+  fill: #fff; }
   .dismiss:hover, .dismiss:focus {
     fill: #f54997; }
 
 .editorial-label {
-  background-color: #f54997;
-  color: #eee;
+  background-color: #cf3e80;
+  color: #fff;
   padding: 0px 4px;
   display: inline-block;
   vertical-align: middle; }
@@ -1844,7 +1910,7 @@ td {
   0% {
     background-color: #444; }
   50% {
-    background-color: #f54997; }
+    background-color: #cf3e80; }
   100% {
     background-color: #444; } }
 .filter-item {
@@ -1866,17 +1932,17 @@ td {
     color: #fff; }
   .filter-item--active, .filter-item--active:hover, .filter-item--active:focus {
     cursor: default;
-    color: #f54997;
-    fill: #f54997; }
+    color: #cf3e80;
+    fill: #cf3e80; }
 
 .nav-item {
-  color: #eee;
+  color: #fff;
   cursor: pointer;
   text-align: left;
   vertical-align: middle;
   display: table;
   width: 100%;
-  fill: #eee;
+  fill: #fff;
   height: 32px;
   transition: color 0.4s ease 0s,background-color 0.4s ease 0s; }
   .nav-item p,
@@ -1892,7 +1958,7 @@ td {
     color: #333; }
   .nav-item--active, .nav-item--active:hover, .nav-item--active:focus {
     background-color: #cf3e80;
-    color: #eee;
+    color: #fff;
     cursor: default; }
 
 .progress {
@@ -1928,71 +1994,69 @@ td {
   display: inline-block; }
 
 .modal {
-  width: 456px;
+  width: 288px;
   background-color: #2a2a2a;
-  padding: 56px 32px 32px;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  margin: auto; }
+  @media (min-width: 25em) {
+    .modal {
+      max-width: 456px;
+      width: 100%; } }
+  @media (min-width: 37.5em) {
+    .modal {
+      width: 456px; } }
+  .modal__inner {
+    padding: 56px 32px 32px; }
   .modal__title {
     color: #f54997; }
+  .modal__subtitle {
+    color: #eee;
+    margin-top: 8px; }
   .modal__description {
     color: #bbb;
     margin-top: 8px; }
-  .modal__buttons--stacked {
-    height: 56px;
-    text-align: center; }
+  .modal__links {
+    padding-top: 16px; }
+  .modal__dismiss {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .modal__checkbox, .modal__guidance {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px 0; }
+    .modal__checkbox p, .modal__guidance p {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 60%;
+      text-align: left;
+      margin-left: 8px; }
+    .modal__checkbox svg, .modal__guidance svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: red; }
+  .modal__checkbox p {
+    max-width: 100%; }
 
-nav {
-  height: 60px;
-  background-color: #1e1e1e;
-  border-bottom: solid 1px #333;
+.btn--modal-stacked-buttons {
+  height: 56px;
   width: 100%;
-  position: fixed;
-  top: 0;
+  border-top: solid 1px #444;
+  background-color: #2a2a2a; }
+
+.btn--modal-inline-buttons {
   display: inline-block;
-  vertical-align: middle; }
-
-nav ul {
-  padding: 20px;
-  list-style: none;
-  text-align: left; }
-
-nav ul li {
-  display: inline-block;
-  margin: 0 10px; }
-
-nav ul li a {
-  text-transform: uppercase; }
-
-a.active {
-  border-bottom: 2px solid #ecf0f1; }
-
-.toggleNavBtn {
-  text-align: right;
-  padding: 20px;
-  text-transform: uppercase; }
-
-#subnav {
+  height: 56px;
   width: 100%;
-  background-color: black;
-  border-top: solid 1px #333;
-  -webkit-transition: all 0.7s ease-out;
-  overflow: hidden;
-  max-height: 0px; }
-  #subnav.active {
-    border-bottom: solid 1px #333;
-    border-top: solid 1px #333;
-    height: auto;
-    max-height: 900px; }
-  #subnav ul {
-    width: 100%;
-    margin: 0 auto;
-    display: block; }
-    #subnav ul li {
-      display: block;
-      padding: 16px 0; }
-
-.navLink--active a {
-  color: #f54997; }
+  background-color: #2a2a2a;
+  border-top: solid 1px #444; }
+  @media (min-width: 37.5em) {
+    .btn--modal-inline-buttons {
+      width: 50%; } }
+  @media (min-width: 37.5em) {
+    .btn--modal-inline-buttons:first-child {
+      border-right: solid 1px #444; } }
 
 body {
   background-color: #252525;
