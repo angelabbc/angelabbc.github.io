@@ -1759,12 +1759,15 @@ a.active {
     display: inline-block;
     vertical-align: middle; }
   .btn svg {
-    fill: #fff;
+    fill: #bbb;
+    transition: fill 0.4s ease 0s,background-color 0.4s ease 0s;
     display: inline-block;
     vertical-align: middle; }
   .btn:focus, .btn:hover {
     background-color: #cf3e80;
     outline: 0; }
+    .btn:focus svg, .btn:hover svg {
+      fill: #fff; }
   .btn--inverted {
     background-color: #cf3e80;
     color: #fff; }
@@ -1782,15 +1785,9 @@ a.active {
     @media (min-width: 25em) and (max-width: 37.49em) {
       .btn--relatedLinks {
         padding-right: 0; } }
-    .btn--relatedLinks svg {
-      fill: #bbb;
-      transition: fill 0.4s ease 0s,background-color 0.4s ease 0s;
-      vertical-align: middle;
-      display: inline-block; }
     .btn--relatedLinks:hover, .btn--relatedLinks:focus {
       border-top: solid 1px #f54997;
-      background-color: transparent;
-      color: #fff; }
+      background-color: transparent; }
       .btn--relatedLinks:hover svg, .btn--relatedLinks:focus svg {
         fill: #f54997; }
   .btn--leftIcon svg {
@@ -2054,6 +2051,30 @@ a.active {
   @media (min-width: 37.5em) {
     .btn--modal-inline-buttons:first-child {
       border-right: solid 1px #444; } }
+
+.modal__checkbox {
+  margin: 24px 0px 0px 0px; }
+  .modal__checkbox svg {
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff; }
+  .modal__checkbox label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle; }
+  .modal__checkbox input[type="checkbox"] {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    margin: 0px; }
+  .modal__checkbox input[type="checkbox"]:checked ~ label svg path {
+    fill: #333; }
+  .modal__checkbox .checkbox__text {
+    padding-left: 16px; }
 
 .title-block {
   text-align: left;
