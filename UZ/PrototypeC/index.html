@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE HTML>
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Prototype C</title>
+
+
+			<meta name="HandheldFriendly" content="True">
+			<meta name="MobileOptimized" content="360">
+
+
+
+
+			<meta name="viewport" content="minimum-scale=1.00, maximum-scale=1.00, initial-scale=1.00, user-scalable=no, shrink-to-fit=no" />
+
+
+
+			<meta name="format-detection" content="telephone=no">
+
+
+
+
+			<link rel="shortcut icon" href="apple-touch-icon.png">
+
+
+
+			<meta http-equiv="cleartype" content="on">
+
+
+
+		    <script type="text/javascript" src="./scripts/plugins/jquery/jquery.js"></script>
+
+
+				<link rel="stylesheet" href="./stylesheets/player-export.css" />
+				<script type="text/javascript" src="./scripts/player-export.js"></script>
+
+
+
+			<script type="text/javascript" src="./libraries/common/components.js"></script>
+			<link type="text/css" rel="Stylesheet" href="./libraries/common/components.1.00.css" />
+
+
+					<script type="text/javascript" src="./libraries/generic2/components.js"></script>
+					<link type="text/css" rel="Stylesheet" href="./libraries/generic2/components.1.00.css" />
+
+				<script type="text/javascript" src="./data/data.js"></script>
+
+
+		<style>
+			body { width: 360px; height: 740px; }
+			.landscape, .landscape .prx-page { min-height: 360px; }
+			.portrait, .portrait .prx-page { min-height: 740px; }
+		</style>
+
+		<script type="text/javascript">
+
+			prx.ver = '6.6.18.0';
+			prx.url.account = 'https://bbcuxd.proto.io';
+			prx.url.staticassets = 'https://gal.proto.io';
+			prx.url.devices = 'https://dteyv52hbg2at.cloudfront.net/devices';
+			prx.url.static = 'https://dteyv52hbg2at.cloudfront.net';
+			prx.url.siteurl = 'proto.io';
+			prx.url.crossmsg = 'https://bbcuxd.proto.io';
+
+			prx.nodejsassetsserver = {};
+			prx.nodejsassetsserver.host = ".proto.io";
+			prx.nodejsassetsserver.subdomainprefix = "https://at";
+			prx.nodejsassetsserver.maxsubdomains = "20";
+
+			prx.device_library = 'generic2';
+			prx.devices[prx.device] = {
+				name: prx.device
+				,defaultOrientation: 'portrait'
+				,portrait_applies: 1 //new
+				,portrait: [360,740]
+				,landscape_applies: 1 //new
+				,landscape: [740,360]
+				,allow_orientation_change: 1 //new
+				,statusbar_skin: 'default' // new
+				,statusbarheightportrait: 0
+				,statusbarheightlandscape: 0
+				,navigationbar_skin: 'default' //new
+				,navigationbarheightportrait: 0
+				,navigationbarheightlandscape: 0
+				,normalportrait: [360,740]
+				,normallandscape: [740,360]
+				,device_s3bucket: 'd05ecca1-ba22-475a-8052-ae0acb3fa301'
+				,dpr: '1.00'
+				,deviceType: "default"
+				,showiPhoneXNotch: false
+				,appleWatchRoundedCorners: false
+				,scrollType: "default"
+				,initialscale: 1.00
+				,targetdensitydpi: "device-dpi"
+			}
+
+			prx.projectsettings.id = '57caf1e3-6300-45b0-9b25-a114b976285b';
+			prx.projectsettings.s3b = 'uxd001-25933-proto';
+			prx.projectsettings.account = 'bbcuxd';
+			prx.projectsettings.statusbar = '0';
+			prx.projectsettings.statusbarapplies = '0';
+			prx.projectsettings.navigationbar = '0';
+			prx.projectsettings.navigationbarapplies = '0';
+			prx.projectsettings.initialpageid = -1;
+
+
+			prx.projectsettings.flashactions = 0;
+			prx.projectsettings.gatrackingcode = '';
+
+			prx.export2html = '1' == true;
+			prx.mobPlayer = 0;
+
+			prx.user.country = 'US';
+
+			prx.s3Links = [];
+			var sLinkedAssets = [];
+
+				sLinkedAssets["p_5a7ebc2008f0fec9fbcff5b1c10d4608"]="http://bbc.github.io/gel-iconography/";
+
+
+			prx.csrf_token = 'A33BD656692BE04806462BDEC5F25B1775E252E4874D2A2CE49C79E76545FDB4';
+
+
+
+
+                            prx.assetsAccessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkIjp7InVpZCI6Ii0xIiwicHJvamVjdF9pZCI6IjU3Y2FmMWUzLTYzMDAtNDViMC05YjI1LWExMTRiOTc2Mjg1YiJ9LCJ2IjowLCJleHAiOjE1NzQ4Njk5NTMsImlhdCI6MTU3NDY4OTk1M30.07qzPozAKbTA2xV2XDtlX6j4B3Q91I--KZvcOdsz8D8";
+
+			prx.iniPlayer.iniPreLoad();
+
+		</script>
+	</head>
+
+
+
+			<body class="player device-cursor-touch mobile-device-true " " id="mbd" >
+
+
+				<div id="window-wrapper">
+					<div id="dragarea"></div>
+					<div id="statusbar"></div>
+					<div id="underlay" style=""></div>
+
+					<div class="prx-page" data-role="page" id="p-1" data-id="1"></div>
+
+								<div class="prx-page" data-role="page" id="p-2" data-id="2"></div>
+
+								<div class="prx-page" data-role="page" id="p-3" data-id="3"></div>
+
+								<div class="prx-page" data-role="page" id="p-4" data-id="4"></div>
+
+					<div id="navigationbar"></div>
+					<div id="overlay"></div>
+					<div id="trash"></div>
+					<div id="quick-audios"></div>
+				</div>
+
+
+			<div id="loader-wrapper">
+
+				<div class="progress">
+					<div class="progress-bar"></div>
+				</div>
+				<div id="poweredby"></div>
+			</div>
+
+
+
+			</body>
+
+
+</html>
